@@ -5,20 +5,23 @@ services:
     image: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=wp
+      - MYSQL_DATABASE=mag
 
-  mailhog:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_HOST=mariadb
     ports:
-      - "8080:80"
+      - "8085:80"
     depends_on:
     - mariadb
 
   mailhog:
     image: mailhog/mailhog
     ports:
-      - "80:80"
+      - "1025:80"
+      - "8025:80"
     depends_on:
     - mariadb
+
+ 
