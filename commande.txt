@@ -3,3 +3,5 @@ docker-compose up --build -d
 docker build -t magt .
 
 docker run -ti -p 8088:80 --name mag -v /Users/utilisateur/docker_mag:/var/www/html magt
+
+docker run -ti -p 8025:80 --name magmail -d -v /Users/utilisateur/docker_mag:/var/www/html mailhog/mailhog
