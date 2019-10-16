@@ -19,9 +19,7 @@ services:
   mailhog:
     image: mailhog/mailhog
     ports:
-      - "1025:80"
-      - "8025:80"
+      - "1025:1025"
+      - "8025:8025"
     depends_on:
     - mariadb
-
- 

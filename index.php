@@ -1,5 +1,6 @@
 <?php
+    echo ('Hello world');
 
-    echo('coucou')
+    mail("recipient", "subject", "message", "From: Sender");
 
 ?>
