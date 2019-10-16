@@ -23,3 +23,11 @@ services:
       - "8025:8025"
     depends_on:
     - mariadb
+
+  phpapp:
+    image: magt
+    ports:
+      - "8080:80"
+    depends_on:
+    - mariadb
+    - mailhog
